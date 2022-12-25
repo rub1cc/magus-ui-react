@@ -1,0 +1,130 @@
+<!-- Button.stories.mdx -->
+
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks"
+import { ArgsTable } from "@storybook/addon-docs"
+import { Button, Stack } from "components"
+
+<Meta title="Components/Button" component={Button} />
+
+## Button
+
+To add `Button` component to your app:
+
+```js
+import { Button } from "@magus-ui/react"
+```
+
+### Button default
+
+<Canvas withSource="open">
+  <Story
+    name="base"
+    parameters={{
+      docs: {
+        source: {
+          code: `
+<Button>Default</Button>
+`,
+        },
+      },
+    }}
+  >
+    <Button>Default</Button>
+  </Story>
+</Canvas>
+
+### Button variants
+
+<Canvas withSource="open">
+  <Story
+    name="variants"
+    parameters={{
+      docs: {
+        source: {
+          code: `
+<Button variant="primary">Primary</Button>
+<Button>Secondary</Button>
+<Button variant="danger">Danger</Button>
+<Button variant="ghost">Ghost</Button>
+`,
+        },
+      },
+    }}
+  >
+    <Stack spacing="sm">
+      <Button variant="primary">Primary</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="danger">Danger</Button>
+      <Button variant="ghost">Ghost</Button>
+    </Stack>
+  </Story>
+</Canvas>
+
+### Button sizes
+
+<Canvas withSource="open">
+  <Story
+    name="sizes"
+    parameters={{
+      docs: {
+        source: {
+          code: `
+<Button size="sm">Small</Button>
+<Button size="md">Medium</Button>
+<Button size="lg">Large</Button>
+`,
+        },
+      },
+    }}
+  >
+    <Stack spacing="sm">
+      <Button size="sm">Small</Button>
+      <Button size="md">Medium</Button>
+      <Button size="lg">Large</Button>
+    </Stack>
+  </Story>
+</Canvas>
+
+### Button disabled
+
+<Canvas withSource="open">
+  <Story
+    name="disabled"
+    parameters={{
+      docs: {
+        source: {
+          code: `
+<Button disabled>Disabled</Button>
+`,
+        },
+      },
+    }}
+  >
+    <Button disabled>Disabled</Button>
+  </Story>
+</Canvas>
+
+### Full width button
+
+<Canvas withSource="open">
+  <Story
+    name="full width"
+    parameters={{
+      docs: {
+        source: {
+          code: `
+<Button block>Full width</Button>
+`,
+        },
+      },
+    }}
+  >
+    <Stack spacing="sm">
+      <Button block>Full width</Button>
+    </Stack>
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Button} />

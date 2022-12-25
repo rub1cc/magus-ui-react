@@ -1,0 +1,77 @@
+<!-- Badge.stories.mdx -->
+
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks"
+import { ArgsTable } from "@storybook/addon-docs"
+import { Badge, Stack } from "components"
+import { ClockIcon } from "@heroicons/react/24/outline"
+import { ArrowUpRightIcon, ArrowDownRightIcon } from "@heroicons/react/20/solid"
+
+<Meta title="Components/Badge" component={Badge} />
+
+## Badge
+
+To add `Badge` component to your app:
+
+```js
+import { Badge } from "@magus-ui/react"
+```
+
+### Badge variants
+
+<Canvas withSource="open">
+  <Story
+    name="variants"
+    parameters={{
+      docs: {
+        source: {
+          code: `
+<Badge label="Default" />
+<Badge variant="info" label="Info" />
+<Badge variant="positive" label="Positive" />
+<Badge variant="negative" label="Negative" />
+<Badge variant="warning" label="Warning" />
+<Badge variant="danger" label="Danger" />
+`,
+        },
+      },
+    }}
+  >
+    <Stack spacing="sm">
+      <Badge label="Default" />
+      <Badge variant="info" label="Info" />
+      <Badge variant="positive" label="Positive" />
+      <Badge variant="negative" label="Negative" />
+      <Badge variant="warning" label="Warning" />
+      <Badge variant="danger" label="Danger" />
+    </Stack>
+  </Story>
+</Canvas>
+
+### Badge with icon
+
+<Canvas withSource="open">
+  <Story
+    name="With icon"
+    parameters={{
+      docs: {
+        source: {
+          code: `
+<Badge icon={ClockIcon} label="Waiting" />
+<Badge icon={ArrowUpRightIcon} variant="positive" label="15%" />
+<Badge icon={ArrowDownRightIcon} variant="warning" label="15%" />
+`,
+        },
+      },
+    }}
+  >
+    <Stack spacing="sm">
+      <Badge icon={ClockIcon} label="Waiting" />
+      <Badge icon={ArrowUpRightIcon} variant="positive" label="14%" />
+      <Badge icon={ArrowDownRightIcon} variant="warning" label="12%" />
+    </Stack>
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Badge} />
